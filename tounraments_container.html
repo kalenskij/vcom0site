@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/tounraments_container.css">
+  <title>VCOM | Tournaments</title>
+  <link rel="icon" type="image/png" href="images/logo_head.png"/>
+</head>
+
+<body>
+  <div id="container">
+    <nav>
+      <a href="main.html" id="logo"><img src="images/Лого.svg"></a>
+
+      <label for="drop" class="toggle">
+        <div id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </label>
+      <input type="checkbox" id="drop" />
+      <ul class="menu">
+        <li><a href="tounraments_container.html">Турніри</a></li>
+        <li><a href="https://discord.com/invite/vcom" target="_blank">24/7&nbsp;Підтримка</a></li>
+        <a href="main.html"><img src="images/Текст лого.svg"></a>
+      </ul>
+    </nav>
+
+    <div id="main">
+      <img src="images/Group 45.png">
+      <img id="mobile_pic" src="images/R1_1.png">
+
+      <p class="main_text">
+        Вас вітає перше українське VALORANT ком`юніті!
+      </p>
+
+      <p class="add_text">
+        Бажаємо вам приємної гри та гарних тіммейтів! #VCOM
+      </p>
+
+      <a class="join_button" href="https://discord.com/invite/vcom" target="_blank">
+        Приєднатись
+      </a>
+    </div>
+    <div id="chooser">
+      <button class="option active" id="current">
+        <div class="text">
+          Активні
+        </div>
+        <span class="third_line"></span>
+      </button>
+      <button class="option" id="future">
+        <div class="text">
+          Майбутні
+        </div>
+        <span class="third_line"></span>
+      </button>
+      <button class="option" id="past">
+        <div class="text">
+          Минулі
+        </div>
+        <span class="third_line"></span>
+      </button>
+    </div>
+
+    <div id="tournaments_list">
+      <div class="tournaments_list empty" id="current_list">
+        <div>
+          <img src="images/Group 46.svg">
+          <p>
+            На жаль, на разі активні турніри відсутні.
+          </p>
+        </div>
+      </div>
+      <div class="tournaments_list empty" id="future_list">
+        <div>
+          <img src="images/Group 46.svg">
+          <p>
+            На жаль, на разі немає запланованих турнірів.
+          </p>
+        </div>
+      </div>
+      <div class="tournaments_list" id="past_list">
+        <a href="tournament1.html" class="tournament">
+          <div class="main_info">
+            <img src="images/qqqqqqqqq.png">
+            <div>
+              <div>
+                <p>
+                  VCOM :: FIRST
+                </p>
+                <p>
+                  20.03-26.03
+                </p>
+                <p>
+                  10000 грн
+                </p>
+              </div>
+              <div>
+                <p>
+                  ВСІ<br>РАНГИ
+                </p>
+              </div>
+            </div>
+          </div>
+          <p>
+            Перший турнір для нашого серверу. Обмеження по рангу відсутні, отже приєднатися можуть всі. <br><br>Запрошуємо на дебют VCOM’у!
+          </p>
+          <p>
+            ВСІ РАНГИ
+          </p>
+        </a>
+        <a href="tournament2.html" class="tournament">
+          <div class="main_info">
+            <img src="images/Layer_56.png">
+            <div>
+              <div>
+                <p>
+                  VCOM :: SUMMER
+                </p>
+                <p>
+                  21.03-27.03
+                </p>
+                <p>
+                  15000 грн
+                </p>
+              </div>
+              <div>
+                <p>
+                  ASC-<br>IMMO
+                </p>
+              </div>
+            </div>
+          </div>
+          <p>
+            Турнір для досконалих гравців під літню тематику.<br><br>Запрошуються команди з середнім рангом від розквіту до безсмертного.
+          </p>
+          <p>
+            ASC-IMMO
+          </p>
+        </a>
+        <a href="tournament3.html" class="tournament">
+          <div class="main_info">
+            <img src="images/screens33-min.png">
+            <div>
+              <div>
+                <p>
+                  VCOM :: LAST DASH
+                </p>
+                <p>
+                  22.03-27.03
+                </p>
+                <p>
+                  20000 грн
+                </p>
+              </div>
+              <div>
+                <p>
+                  ВСІ<br>РАНГИ
+                </p>
+              </div>
+            </div>
+          </div>
+          <p>
+            Наш перший внутрішноьспільнотний турнір!<br><br>Це був найгірший турнір.
+          </p>
+          <p>
+            ВСІ РАНГИ
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <img src="images/Текст лого.svg">
+      <p>
+        Усі авторські права і торгові марки належать відповідним власникам
+      </p>
+      <p>
+        VCOM | VALORANT COMMUNITY UA &copy; 2022-2023
+      </p>
+    </footer>
+
+  </div>
+</body>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const current = document.getElementById("current");
+  const future = document.getElementById("future");
+  const past = document.getElementById("past");
+  const current_list = document.getElementById("current_list");
+  const future_list = document.getElementById("future_list");
+  const past_list = document.getElementById("past_list");
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+  })
+  current.addEventListener("click", () => {
+    current.classList.add("active");
+    future.classList.remove("active");
+    past.classList.remove("active");
+    current_list.style.left="0%";
+    future_list.style.left="100%";
+    past_list.style.left="200%";
+    current_list.style.position="relative";
+    future_list.style.position="absolute";
+    past_list.style.position="absolute";
+  })
+  future.addEventListener("click", () => {
+    current.classList.remove("active");
+    future.classList.add("active");
+    past.classList.remove("active");
+    current_list.style.position="absolute";
+    future_list.style.position="relative";
+    past_list.style.position="absolute";
+    current_list.style.left="-100%";
+    future_list.style.left="0%";
+    past_list.style.left="100%";
+  })
+  past.addEventListener("click", () => {
+    current.classList.remove("active");
+    future.classList.remove("active");
+    past.classList.add("active");
+    current_list.style.position="absolute";
+    future_list.style.position="absolute";
+    past_list.style.position="relative";
+    current_list.style.left="-200%";
+    future_list.style.left="-100%";
+    past_list.style.left="0%";
+  })
+
+
+</script>
+
+</html>
